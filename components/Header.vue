@@ -1,8 +1,8 @@
 <template>
-  <header class="section-header">
+  <header class="section-header" :class="{ 'items' : !transparentNavbar}">
 
     <div class="container-fluid">
-      <nav class="navbar navbar-expand-md pt-5">
+      <nav class="navbar navbar-expand-md py-3">
 
         <logo />
 
@@ -38,7 +38,9 @@
 
 
 <script>
-export default {}
+export default {
+  props: ['transparentNavbar']
+}
 </script>
 
 <style lang="scss">
@@ -52,6 +54,8 @@ export default {}
 
 .section-header.items {
   background-image: none;
+  background-image: none;
+  position: relative;
 }
 
 .navbar {

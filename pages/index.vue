@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header :transparentNavbar="story.content.transparent_navbar" />
     <component v-if="story.content.component" :key="story.content._uid" :story="story" :products="products" :blok="story.content" :is="story.content.component"></component>
   </div>
 </template>

@@ -1,7 +1,13 @@
 <template>
-  <main class="section-content">
-    <component v-for="productItem in productItems" :key="productItem._uid" :blok="productItem" :is="productItem.component"></component>
-  </main>
+  <div>
+    <Header :transparentNavbar="transparentNavbar" />
+    <main class="section-content">
+      <div class="grid">
+        <component v-for="productItem in productItems" :key="productItem._uid" :blok="productItem" :is="productItem.component"></component>
+      </div>
+
+    </main>
+  </div>
 </template>
 
 <script>
@@ -12,7 +18,10 @@ export default {
         dersion: 'draft'
       })
       .then(res => {
-        return { productItems: res.data.story.content.productItems }
+        return {
+          productItems: res.data.story.content.productItems,
+          transparentNavbar: res.data.story.content.transparent_navbar
+        }
       })
   }
 }
