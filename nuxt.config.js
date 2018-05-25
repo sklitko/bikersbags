@@ -51,7 +51,13 @@ module.exports = {
 
     [
       'storyblok-nuxt',
-      { accessToken: 'Tbo8SrVU6kPFEQZfivVNeQtt', rcacheProvide: 'memory' }
+      {
+        accessToken:
+          process.env.NODE_ENV == 'production'
+            ? '0GC4bG8g9TVnguHvK5t8nQtt'
+            : 'Tbo8SrVU6kPFEQZfivVNeQtt',
+        rcacheProvide: 'memory'
+      }
     ]
   ],
 

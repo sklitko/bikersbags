@@ -1,6 +1,6 @@
 <template>
   <div class="col-12 col-md-4 mb-3">
-    <div class="card">
+    <div class="card" v-editable="blok">
       <img :src="blok.content.image" alt="" class="card-img-top">
       <div class="card-body">
         <h5 class="card-title">{{blok.content.title}}</h5>
@@ -18,7 +18,10 @@
 
 <script>
 export default {
-  props: ['blok']
+  props: ['blok'],
+  mounted() {
+    this.$storyblok.init()
+  }
 }
 </script>
 

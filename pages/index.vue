@@ -11,7 +11,7 @@ export default {
     let [storyRes, productRes] = await Promise.all([
       context.app.$storyapi.get('cdn/stories/home', { version: 'draft' }),
       context.app.$storyapi.get('cdn/stories', {
-        version: 'draft',
+        version: context.isDev ? 'draft' : 'published',
         starts_with: 'products/'
       })
     ])
@@ -19,6 +19,9 @@ export default {
       story: storyRes.data.story,
       products: productRes.data.stories
     }
+  },
+  mounted() {
+    this.$storyblok.init()
   }
 }
 </script>

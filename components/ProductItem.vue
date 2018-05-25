@@ -1,6 +1,6 @@
 <template>
 
-  <div class="grid-item">
+  <div class="grid-item" v-editable="blok">
     <div class="item" :style="{backgroundImage: 'url(' + blok.image_1 + ')'}"></div>
     <div class="item" :style="{backgroundImage: 'url(' + blok.image_2 + ')'}"></div>
     <div class="item" :style="{backgroundImage: 'url(' + blok.image_3 + ')'}"></div>
@@ -11,6 +11,9 @@
 
 <script>
 export default {
-  props: ['blok']
+  props: ['blok'],
+  mounted() {
+    this.$storyblok.init()
+  }
 }
 </script>

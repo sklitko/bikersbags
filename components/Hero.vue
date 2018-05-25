@@ -1,5 +1,5 @@
 <template>
-  <div class="section-hero" :style="{backgroundImage: 'url('+blok.image+')'}">
+  <div class="section-hero" :style="{backgroundImage: 'url('+blok.image+')'}" v-editable="blok">
     <div class="container-fluid">
       <div class="row">
         <div class="col">
