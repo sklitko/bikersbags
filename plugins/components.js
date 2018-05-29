@@ -10,6 +10,7 @@ import ContactItem from '@/components/ContactItem.vue'
 import ProductItem from '@/components/ProductItem.vue'
 import Footer from '@/components/Footer.vue'
 import Header from '@/components/Header.vue'
+import Modal from '@/components/Modal.vue'
 
 Vue.component('logo', Logo)
 Vue.component('hero', Hero)
@@ -22,3 +23,4 @@ Vue.component('contactItem', ContactItem)
 Vue.component('Footer', Footer)
 Vue.component('Header', Header)
 Vue.component('productItem', ProductItem)
+Vue.component('modal', Modal)

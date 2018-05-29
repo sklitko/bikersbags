@@ -5,7 +5,10 @@
     <div class="item" :style="{backgroundImage: 'url(' + blok.image_2 + ')'}"></div>
     <div class="item" :style="{backgroundImage: 'url(' + blok.image_3 + ')'}"></div>
     <div class="item" :style="{backgroundImage: 'url(' + blok.image_4 + ')'}"></div>
-    <a href="#" class="button-link">Заказать</a>
+    <button class="button-link" @click="showModal = true">Заказать</button>
+    <modal v-if="showModal" @close="showModal = false">
+
+    </modal>
   </div>
 
 </template>
@@ -13,6 +16,9 @@
 <script>
 export default {
   props: ['blok'],
+  data: () => ({
+    showModal: false
+  }),
   mounted() {
     this.$storyblok.init()
   }

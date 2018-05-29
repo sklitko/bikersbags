@@ -31,7 +31,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['~/assets/main.min.css'],
+  css: ['~/assets/main.min.css', '~/node_modules/vuetify/dist/vuetify.min.css'],
 
   /*
   ** Plugins to load before mounting the App
@@ -39,11 +39,13 @@ module.exports = {
   plugins: [
     '@/plugins/content-types',
     '@/plugins/components',
-    '@/plugins/font-awesome'
+    '@/plugins/font-awesome',
+    '~/plugins/vuetify.js'
   ],
 
   /*
   ** Nuxt.js modules
+  
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
@@ -72,6 +74,8 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendor: ['~/plugins/vuetify.js'],
+    extractCSS: true,
     /*
     ** You can extend webpack config here
     */
