@@ -4,7 +4,7 @@
       <img :src="blok.content.image" alt="" class="card-img-top">
       <div class="card-body">
         <h5 class="card-title">{{blok.content.title}}</h5>
-        <p class="card-price">${{blok.content.price}}</p>
+        <p class="card-price">{{blok.content.price}} грн.</p>
         <div class="divider">
           <hr>
         </div>

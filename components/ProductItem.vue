@@ -5,7 +5,7 @@
     <div class="item" :style="{backgroundImage: 'url(' + blok.image_2 + ')'}"></div>
     <div class="item" :style="{backgroundImage: 'url(' + blok.image_3 + ')'}"></div>
     <div class="item" :style="{backgroundImage: 'url(' + blok.image_4 + ')'}"></div>
-    <button class="button-link" @click="showModal = true">Заказать</button>
+    <button class="button-link" @click="showModal = true">Замовити</button>
     <modal v-if="showModal" @close="showModal = false">
 
     </modal>
@@ -29,7 +29,7 @@ export default {
 <style lang="scss">
 .button-link {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+  font-weight: bold;
   font-style: normal;
   color: #ffffff;
   background-color: #2ccb77;

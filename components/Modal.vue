@@ -5,7 +5,7 @@
         <div class="modal-vue-container">
 
           <div class="modal-vue-header">
-            <h3>Заказ</h3>
+            <h3>Замовити</h3>
           </div>
 
           <div class="modal-vue-body">
