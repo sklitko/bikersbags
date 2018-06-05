@@ -73,7 +73,7 @@ module.exports = {
         )
         .then(res => {
           const products = res.data.stories.map(bp => bp.full_slug)
-          return ['/', 'products', ...products]
+          return ['/', ...products]
         })
     }
   },
